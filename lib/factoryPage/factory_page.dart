@@ -5,7 +5,7 @@ import 'package:semicircle_indicator/semicircle_indicator.dart';
 import 'package:intl/intl.dart';
 
 class FactoryPage extends StatefulWidget {
-  FactoryPage({Key? key}) : super(key: key);
+  const FactoryPage({super.key});
 
   @override
   _FactoryPageState createState() => _FactoryPageState();
@@ -63,7 +63,7 @@ class _FactoryPageState extends State<FactoryPage> {
                               currSelection = 1;
                             });
                           },
-                          child: FactoryPageSelection(),
+                          child: factoryOneSelection(),
                         ),
                       ),
                       Expanded(
@@ -104,7 +104,7 @@ class _FactoryPageState extends State<FactoryPage> {
                               currSelection = 1;
                             });
                           },
-                          child: FactoryPageDiselection(),
+                          child: factoryOneDiselection(),
                         ),
                       ),
                       Expanded(
@@ -126,7 +126,7 @@ class _FactoryPageState extends State<FactoryPage> {
   }
 }
 
-FactoryPageSelection() {
+factoryOneSelection() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10.0),
     child: Container(
@@ -146,9 +146,9 @@ FactoryPageSelection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -164,7 +164,7 @@ FactoryPageSelection() {
   );
 }
 
-FactoryPageDiselection() {
+factoryOneDiselection() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10.0),
     child: Container(
@@ -184,9 +184,9 @@ FactoryPageDiselection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -222,9 +222,9 @@ factoryTwoSelection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -260,9 +260,9 @@ factoryTwoDiselection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -300,7 +300,7 @@ Container statusOne() {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Icon(Icons.warning, color: Colors.amber),
               Text(
                 " ABD1234 IS UNREACHABLLE",
@@ -628,7 +628,7 @@ Container statusTwo() {
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            children: const [
               Text(
                 "1549.7kW",
                 style: TextStyle(

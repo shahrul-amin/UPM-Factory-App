@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:upm_factory/nav_bar.dart';
 
 class ActivationPage extends StatefulWidget {
-  ActivationPage({Key? key}) : super(key: key);
+  const ActivationPage({super.key});
 
   @override
   _ActivationPageState createState() => _ActivationPageState();
@@ -183,26 +183,24 @@ class _ActivationPageState extends State<ActivationPage> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
-              child: Container(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => NavigationBars(),
-                      ),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.purple[400],
-                    elevation: 4,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      buttonName,
-                      style: TextStyle(fontSize: 22),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => NavigationBars(),
                     ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.purple[400],
+                  elevation: 4,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    buttonName,
+                    style: TextStyle(fontSize: 22),
                   ),
                 ),
               ),

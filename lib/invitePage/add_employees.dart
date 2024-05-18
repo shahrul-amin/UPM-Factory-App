@@ -5,8 +5,8 @@ class AddEmployees extends StatefulWidget {
   final int factorySection;
   final Function(String, String, int) addEmployeeCallback;
 
-  AddEmployees(
-      {required this.factorySection, required this.addEmployeeCallback});
+  const AddEmployees(
+      {super.key, required this.factorySection, required this.addEmployeeCallback});
 
   @override
   _AddEmployeesState createState() => _AddEmployeesState();
@@ -23,7 +23,7 @@ class _AddEmployeesState extends State<AddEmployees> {
       appBar: AppBar(
         title: Text(
           'Factory $factorySection',
-          style: TextStyle(
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 28,
           ),
@@ -31,7 +31,7 @@ class _AddEmployeesState extends State<AddEmployees> {
         centerTitle: true,
         actions: [
           IconButton(
-            icon: Icon(
+            icon: const Icon(
               Icons.settings,
               size: 28,
             ),
@@ -44,7 +44,7 @@ class _AddEmployeesState extends State<AddEmployees> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Text(
+            const Text(
               'Invitation',
               style: TextStyle(
                 fontSize: 36,
@@ -52,7 +52,7 @@ class _AddEmployeesState extends State<AddEmployees> {
               ),
               textAlign: TextAlign.center,
             ),
-            Text(
+            const Text(
               'Invite Users',
               style: TextStyle(
                 fontSize: 18,
@@ -60,7 +60,7 @@ class _AddEmployeesState extends State<AddEmployees> {
               ),
               textAlign: TextAlign.center,
             ),
-            Text("Owner's Name"),
+            const Text("Owner's Name"),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 15.0),
               child: Container(
@@ -71,7 +71,7 @@ class _AddEmployeesState extends State<AddEmployees> {
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: TextField(
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                         hintText: "Type Here", border: InputBorder.none),
                     onChanged: (value) {
                       name = value;
@@ -80,7 +80,7 @@ class _AddEmployeesState extends State<AddEmployees> {
                 ),
               ),
             ),
-            Text("Owner's Phone Number"),
+            const Text("Owner's Phone Number"),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 15.0),
               child: Row(
@@ -97,9 +97,9 @@ class _AddEmployeesState extends State<AddEmployees> {
                           initialCountryCode: "MY",
                           disableLengthCheck: true,
                           pickerDialogStyle: PickerDialogStyle(
-                            countryFlagStyle: TextStyle(fontSize: 17),
+                            countryFlagStyle: const TextStyle(fontSize: 17),
                           ),
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: 'Phone Number',
                             border: InputBorder.none,
                           ),
@@ -117,7 +117,7 @@ class _AddEmployeesState extends State<AddEmployees> {
                 widget.addEmployeeCallback(
                     name, phoneNumber, widget.factorySection);
               },
-              child: Text('Submit'),
+              child: const Text('Submit'),
             ),
           ],
         ),

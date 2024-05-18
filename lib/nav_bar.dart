@@ -6,7 +6,7 @@ import 'package:upm_factory/invitePage/invite_page.dart';
 import 'package:upm_factory/settingPage/setting_page.dart';
 
 class NavigationBars extends StatefulWidget {
-  NavigationBars({Key? key}) : super(key: key);
+  NavigationBars({super.key});
 
   @override
   _NavigationBarsState createState() => _NavigationBarsState();

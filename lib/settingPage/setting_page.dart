@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 class SettingPage extends StatefulWidget {
-  SettingPage({Key? key}) : super(key: key);
+  const SettingPage({super.key});
 
   @override
   _SettingPageState createState() => _SettingPageState();
@@ -144,9 +144,9 @@ factoryOneSelection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -182,9 +182,9 @@ factoryOneDiselection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -220,9 +220,9 @@ factoryTwoSelection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -258,9 +258,9 @@ factoryTwoDiselection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,

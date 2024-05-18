@@ -1,8 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:upm_factory/invitePage/add_employees.dart';
 
 class Employee {
@@ -13,7 +11,7 @@ class Employee {
 }
 
 class InvitePage extends StatefulWidget {
-  InvitePage({Key? key}) : super(key: key);
+  const InvitePage({super.key});
 
   @override
   InvitePageState createState() => InvitePageState();
@@ -355,9 +353,9 @@ factoryOneSelection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -393,9 +391,9 @@ factoryOneDiselection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -431,9 +429,9 @@ factoryTwoSelection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,
@@ -469,9 +467,9 @@ factoryTwoDiselection() {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
+        children: const [
           Padding(
-            padding: const EdgeInsets.only(bottom: 10.0),
+            padding: EdgeInsets.only(bottom: 10.0),
             child: Icon(
               Icons.factory,
               size: 50,

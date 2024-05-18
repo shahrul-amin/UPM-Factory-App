@@ -10,7 +10,7 @@ void main() {
 }
 
 class MyApp extends StatefulWidget {
-  MyApp({super.key});
+  const MyApp({super.key});
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
 }
 
 class MyAppHome extends StatefulWidget {
-  MyAppHome({Key? key}) : super(key: key);
+  const MyAppHome({super.key});
 
   @override
   _MyAppStateHome createState() => _MyAppStateHome();
@@ -208,26 +208,24 @@ class _MyAppStateHome extends State<MyAppHome> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 10.0),
-              child: Container(
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (BuildContext context) => ActivationPage(),
-                      ),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: Colors.purple[400],
-                    elevation: 4,
-                  ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      buttonName,
-                      style: TextStyle(fontSize: 22),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => ActivationPage(),
                     ),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.purple[400],
+                  elevation: 4,
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    buttonName,
+                    style: TextStyle(fontSize: 22),
                   ),
                 ),
               ),

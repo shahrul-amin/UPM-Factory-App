@@ -103,9 +103,6 @@ class _AddEmployeesState extends State<AddEmployees> {
                             hintText: 'Phone Number',
                             border: InputBorder.none,
                           ),
-                          onChanged: (value) {
-                            phoneNumber = value as String;
-                          },
                         ),
                       ),
                     ),

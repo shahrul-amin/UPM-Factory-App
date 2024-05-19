@@ -6,7 +6,9 @@ class AddEmployees extends StatefulWidget {
   final Function(String, String, int) addEmployeeCallback;
 
   const AddEmployees(
-      {super.key, required this.factorySection, required this.addEmployeeCallback});
+      {super.key,
+      required this.factorySection,
+      required this.addEmployeeCallback});
 
   @override
   _AddEmployeesState createState() => _AddEmployeesState();
@@ -32,7 +34,7 @@ class _AddEmployeesState extends State<AddEmployees> {
         actions: [
           IconButton(
             icon: const Icon(
-              Icons.settings,
+              Icons.settings_outlined,
               size: 28,
             ),
             onPressed: () {},

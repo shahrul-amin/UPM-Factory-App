@@ -61,7 +61,7 @@ class InvitePageState extends State<InvitePage> {
           actions: [
             IconButton(
               icon: Icon(
-                Icons.settings,
+                Icons.settings_outlined,
                 size: 28,
               ),
               onPressed: () {},
@@ -81,6 +81,7 @@ class InvitePageState extends State<InvitePage> {
                         children: [
                           Expanded(
                             child: Container(
+                                key: Key('employeeOne'),
                                 height: 450,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -178,6 +179,7 @@ class InvitePageState extends State<InvitePage> {
                       children: [
                         Expanded(
                           child: GestureDetector(
+                            key: Key('factoryOneSelection'),
                             onTap: () {
                               setState(() {
                                 currSelection = 1;
@@ -188,6 +190,7 @@ class InvitePageState extends State<InvitePage> {
                         ),
                         Expanded(
                           child: GestureDetector(
+                            key: Key('factoryTwoDiselection'),
                             onTap: () {
                               setState(() {
                                 currSelection = 2;
@@ -210,6 +213,7 @@ class InvitePageState extends State<InvitePage> {
                         children: [
                           Expanded(
                             child: Container(
+                                key: Key('employeeTwo'),
                                 height: 450,
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.circular(20),
@@ -307,6 +311,7 @@ class InvitePageState extends State<InvitePage> {
                       children: [
                         Expanded(
                           child: GestureDetector(
+                            key: Key('factoryOneDiselection'),
                             onTap: () {
                               setState(() {
                                 currSelection = 1;
@@ -317,6 +322,7 @@ class InvitePageState extends State<InvitePage> {
                         ),
                         Expanded(
                           child: GestureDetector(
+                            key: Key('factoryTwoSelection'),
                             onTap: () {
                               setState(() {
                                 currSelection = 2;

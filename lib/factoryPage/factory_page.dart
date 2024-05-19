@@ -29,7 +29,7 @@ class _FactoryPageState extends State<FactoryPage> {
         actions: [
           IconButton(
             icon: Icon(
-              Icons.settings,
+              Icons.settings_outlined,
               size: 28,
             ),
             onPressed: () {},
@@ -58,6 +58,7 @@ class _FactoryPageState extends State<FactoryPage> {
                     children: [
                       Expanded(
                         child: GestureDetector(
+                          key: Key('factoryOneSelection'),
                           onTap: () {
                             setState(() {
                               currSelection = 1;
@@ -68,6 +69,7 @@ class _FactoryPageState extends State<FactoryPage> {
                       ),
                       Expanded(
                         child: GestureDetector(
+                          key: Key('factoryTwoDiselection'),
                           onTap: () {
                             setState(() {
                               currSelection = 2;
@@ -99,6 +101,7 @@ class _FactoryPageState extends State<FactoryPage> {
                     children: [
                       Expanded(
                         child: GestureDetector(
+                          key: Key('factoryOneDiselection'),
                           onTap: () {
                             setState(() {
                               currSelection = 1;
@@ -109,6 +112,7 @@ class _FactoryPageState extends State<FactoryPage> {
                       ),
                       Expanded(
                         child: GestureDetector(
+                          key: Key('factoryTwoSelection'),
                           onTap: () {
                             setState(() {
                               currSelection = 2;
@@ -281,6 +285,7 @@ factoryTwoDiselection() {
 Container statusOne() {
   String noDate = '--:--';
   return Container(
+    key: Key('statusOne'),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       color: Color.fromARGB(255, 232, 232, 232),
@@ -609,6 +614,7 @@ Container statusTwo() {
   DateTime now = DateTime.now();
   String formattedDate = DateFormat('yyyy-MM-dd  kk:mm:ss').format(now);
   return Container(
+    key: Key('statusTwo'),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       color: Color.fromARGB(255, 232, 232, 232),

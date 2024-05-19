@@ -27,7 +27,7 @@ class _SettingPageState extends State<SettingPage> {
         actions: [
           IconButton(
             icon: Icon(
-              Icons.settings,
+              Icons.settings_outlined,
               size: 28,
             ),
             onPressed: () {},
@@ -56,6 +56,7 @@ class _SettingPageState extends State<SettingPage> {
                     children: [
                       Expanded(
                         child: GestureDetector(
+                          key: Key('factoryOneSelection'),
                           onTap: () {
                             setState(() {
                               currSelection = 1;
@@ -66,6 +67,7 @@ class _SettingPageState extends State<SettingPage> {
                       ),
                       Expanded(
                         child: GestureDetector(
+                          key: Key('factoryTwoDiselection'),
                           onTap: () {
                             setState(() {
                               currSelection = 2;
@@ -97,6 +99,7 @@ class _SettingPageState extends State<SettingPage> {
                     children: [
                       Expanded(
                         child: GestureDetector(
+                          key: Key('factoryOneDiselection'),
                           onTap: () {
                             setState(() {
                               currSelection = 1;
@@ -107,6 +110,7 @@ class _SettingPageState extends State<SettingPage> {
                       ),
                       Expanded(
                         child: GestureDetector(
+                          key: Key('factoryTwoSelection'),
                           onTap: () {
                             setState(() {
                               currSelection = 2;
@@ -124,7 +128,7 @@ class _SettingPageState extends State<SettingPage> {
   }
 }
 
-factoryOneSelection() {
+Widget factoryOneSelection() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10.0),
     child: Container(
@@ -162,7 +166,7 @@ factoryOneSelection() {
   );
 }
 
-factoryOneDiselection() {
+Widget factoryOneDiselection() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10.0),
     child: Container(
@@ -200,7 +204,7 @@ factoryOneDiselection() {
   );
 }
 
-factoryTwoSelection() {
+Widget factoryTwoSelection() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10.0),
     child: Container(
@@ -238,7 +242,7 @@ factoryTwoSelection() {
   );
 }
 
-factoryTwoDiselection() {
+Widget factoryTwoDiselection() {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 10.0),
     child: Container(
@@ -276,8 +280,9 @@ factoryTwoDiselection() {
   );
 }
 
-Container status() {
+Widget status() {
   return Container(
+    key: Key('status'),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       color: Color.fromARGB(255, 232, 232, 232),

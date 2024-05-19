@@ -40,7 +40,7 @@ void main() {
       expect(checkbox.value, true);
 
       // Tap the button to navigate to the next page.
-      await tester.tap(find.text('Get Activation Code'));
+      await tester.tap(find.byType(ElevatedButton));
       await tester.pumpAndSettle();
 
       // Verify that the ActivationPage is displayed.
@@ -59,7 +59,7 @@ void main() {
       await tester.enterText(find.byType(TextField), '123456');
 
       // Tap the activation button.
-      await tester.tap(find.text('Activate'));
+      await tester.tap(find.byType(ElevatedButton));
       await tester.pumpAndSettle();
 
       // Verify that the NavigationBars is displayed.

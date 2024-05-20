@@ -33,7 +33,7 @@ void main() {
 
       // Tap the checkbox.
       await tester.tap(find.byType(Checkbox));
-      await tester.pump();
+      await tester.pumpAndSettle();
 
       // Verify the checkbox is checked.
       Checkbox checkbox = tester.widget(find.byType(Checkbox));

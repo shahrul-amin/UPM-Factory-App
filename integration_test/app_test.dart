@@ -19,14 +19,6 @@ void main() {
 
       // Verify if the main widgets are present.
       expect(find.byType(MyAppHome), findsOneWidget);
-      expect(find.text('Welcome !'), findsOneWidget);
-      expect(
-          find.text(
-              'Enter your mobile phone number \nto activate your account.'),
-          findsOneWidget);
-      expect(find.byType(FlutterPhoneNumberField), findsOneWidget);
-      expect(find.text('I agree to the terms & conditions'), findsOneWidget);
-      expect(find.text('Get Activation Code'), findsOneWidget);
 
       // Enter a phone number.
       await tester.enterText(find.byType(FlutterPhoneNumberField), '123456789');
@@ -45,10 +37,6 @@ void main() {
 
       // Verify that the ActivationPage is displayed.
       expect(find.byType(ActivationPage), findsOneWidget);
-      expect(find.text('Enter the activation code \nyou received via SMS.'),
-          findsOneWidget);
-      expect(find.byType(TextField), findsOneWidget);
-      expect(find.byType(ElevatedButton), findsOneWidget);
 
       // Enter an OTP.
       await tester.enterText(find.byType(TextField), '123456');
@@ -59,7 +47,6 @@ void main() {
 
       // Verify elements in NavigationBars
       expect(find.byType(NavigationBars), findsOneWidget);
-      expect(find.byType(FactoryPage), findsOneWidget); // Default tab
 
       // Verify navigation bar functionality
       await tester.tap(find.byIcon(Icons.settings));

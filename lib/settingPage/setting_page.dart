@@ -319,7 +319,7 @@ Widget status() {
                 ElevatedButton(
                     style: ButtonStyle(
                         alignment: Alignment.centerRight,
-                        fixedSize: MaterialStateProperty.all(Size(40, 40))),
+                        fixedSize: WidgetStateProperty.all(Size(40, 40))),
                     onPressed: () {},
                     child: Icon(
                       Icons.edit,

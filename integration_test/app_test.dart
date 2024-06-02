@@ -14,7 +14,7 @@ void main() {
   testWidgets(
     "Integration test for MyApp, ActivationPage, and NavigationBars",
     (WidgetTester tester) async {
-      await tester.pumpWidget(MyApp());
+      await tester.pumpWidget(const MyApp());
 
       // Verify if the main widgets are present.
       expect(find.byType(MyAppHome), findsOneWidget);
@@ -39,78 +39,78 @@ void main() {
       expect(find.byType(SettingPage), findsOneWidget);
 
       // Verify the status widget
-      expect(find.byKey(Key('status')), findsOneWidget);
+      expect(find.byKey(const Key('status')), findsOneWidget);
 
       // Verify the initial factory selection
-      expect(find.byKey(Key('factoryOneSelection')), findsOneWidget);
+      expect(find.byKey(const Key('factoryOneSelection')), findsOneWidget);
 
       // Tap on the second factory
-      await tester.tap(find.byKey(Key('factoryTwoDiselection')));
+      await tester.tap(find.byKey(const Key('factoryTwoDiselection')));
       await tester.pumpAndSettle();
 
       // Verify the second factory selection
-      expect(find.byKey(Key('factoryTwoSelection')), findsOneWidget);
+      expect(find.byKey(const Key('factoryTwoSelection')), findsOneWidget);
 
       // Tap on the first factory
-      await tester.tap(find.byKey(Key('factoryOneDiselection')));
+      await tester.tap(find.byKey(const Key('factoryOneDiselection')));
       await tester.pumpAndSettle();
 
       // Verify the first factory selection
-      expect(find.byKey(Key('factoryOneSelection')), findsOneWidget);
+      expect(find.byKey(const Key('factoryOneSelection')), findsOneWidget);
 
       await tester.tap(find.byIcon(Icons.home));
       await tester.pumpAndSettle();
       expect(find.byType(FactoryPage), findsOneWidget);
 
       // Verify the status widget
-      expect(find.byKey(Key('statusOne')), findsOneWidget);
+      expect(find.byKey(const Key('statusOne')), findsOneWidget);
 
       // Verify the initial factory selection
-      expect(find.byKey(Key('factoryOneSelection')), findsOneWidget);
+      expect(find.byKey(const Key('factoryOneSelection')), findsOneWidget);
 
       // Tap on the second factory
-      await tester.tap(find.byKey(Key('factoryTwoDiselection')));
+      await tester.tap(find.byKey(const Key('factoryTwoDiselection')));
       await tester.pumpAndSettle();
 
       // Verify the status widget
-      expect(find.byKey(Key('statusTwo')), findsOneWidget);
+      expect(find.byKey(const Key('statusTwo')), findsOneWidget);
 
       // Verify the second factory selection
-      expect(find.byKey(Key('factoryTwoSelection')), findsOneWidget);
+      expect(find.byKey(const Key('factoryTwoSelection')), findsOneWidget);
 
       // Tap on the first factory
-      await tester.tap(find.byKey(Key('factoryOneDiselection')));
+      await tester.tap(find.byKey(const Key('factoryOneDiselection')));
       await tester.pumpAndSettle();
 
       // Verify the first factory selection
-      expect(find.byKey(Key('factoryOneSelection')), findsOneWidget);
+      expect(find.byKey(const Key('factoryOneSelection')), findsOneWidget);
 
       await tester.tap(find.byIcon(Icons.person));
       await tester.pumpAndSettle();
       expect(find.byType(InvitePage), findsOneWidget);
 
       // Verify the status widget
-      expect(find.byKey(Key('employeeOne')), findsOneWidget);
+      expect(find.byKey(const Key('employeeOne')), findsOneWidget);
 
       // Verify the initial factory selection
-      expect(find.byKey(Key('factoryOneSelection')), findsOneWidget);
+      expect(find.byKey(const Key('factoryOneSelection')), findsOneWidget);
 
       // Tap on the second factory
-      await tester.tap(find.byKey(Key('factoryTwoDiselection')));
+      await tester.tap(find.byKey(const Key('factoryTwoDiselection')));
       await tester.pumpAndSettle();
 
       // Verify the status widget
-      expect(find.byKey(Key('employeeTwo')), findsOneWidget);
+      expect(find.byKey(const Key('employeeTwo')), findsOneWidget);
 
       // Verify the second factory selection
-      expect(find.byKey(Key('factoryTwoSelection')), findsOneWidget);
+      expect(find.byKey(const Key('factoryTwoSelection')), findsOneWidget);
 
       // Tap on the first factory
-      await tester.tap(find.byKey(Key('factoryOneDiselection')));
+      await tester.tap(find.byKey(const Key('factoryOneDiselection')));
       await tester.pumpAndSettle();
 
       // Verify the first factory selection
-      expect(find.byKey(Key('factoryOneSelection')), findsOneWidget);
+      expect(find.byKey(const Key('factoryOneSelection')), findsOneWidget);
     },
   );
 }

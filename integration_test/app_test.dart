@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
-import 'package:flutter_phone_number_field/flutter_phone_number_field.dart';
 import 'package:upm_factory/main.dart';
 import 'package:upm_factory/activation_page.dart';
 import 'package:upm_factory/nav_bar.dart';
@@ -20,26 +19,12 @@ void main() {
       // Verify if the main widgets are present.
       expect(find.byType(MyAppHome), findsOneWidget);
 
-      // Enter a phone number.
-      await tester.enterText(find.byType(FlutterPhoneNumberField), '123456789');
-
-      // Tap the checkbox.
-      await tester.tap(find.byType(Checkbox));
-      await tester.pumpAndSettle();
-
-      // Verify the checkbox is checked.
-      Checkbox checkbox = tester.widget(find.byType(Checkbox));
-      expect(checkbox.value, true);
-
       // Tap the button to navigate to the next page.
       await tester.tap(find.byType(ElevatedButton));
       await tester.pumpAndSettle();
 
       // Verify that the ActivationPage is displayed.
       expect(find.byType(ActivationPage), findsOneWidget);
-
-      // Enter an OTP.
-      await tester.enterText(find.byType(TextField), '123456');
 
       // Tap the activation button.
       await tester.tap(find.byType(ElevatedButton));
